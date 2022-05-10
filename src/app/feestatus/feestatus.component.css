@@ -1,0 +1,54 @@
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+#feesStatusTable{
+     margin-top: 60px;
+    margin-left: 40px; 
+}
+#loading{
+    margin-top:250px;
+    margin-left: 600px;
+}
+#submitButton{
+    margin-top:30px;
+}
+th{
+padding:20px;
+}
+td{
+    padding:20px;
+}
+#paidFees{
+margin-left:80px;
+}
+#pendingFees{
+margin-left:80px;
+}
+#totalFees{
+margin-left:80px;
+}
+h5{
+margin-left:30px;
+}
+#colon{
+margin-left:70px;
+}
+
+
+#terminate{
+			width:40px;
+			height:40px;
+			position:relative;
+			top:0px;
+			left:340px;
+			/* background-color:; */
+		
+		}
+
+.card{
+   margin-top:80px;
+   margin-left:450px;
+   border-right:500px; 
+   width:30%;
+}

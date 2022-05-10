@@ -1,0 +1,110 @@
+<app-header></app-header>
+<section class="registration" id="registrationDetails" [style.display]="verified">
+  <form ngNativeValidation (submit)="registerValidation()" id="regForm" >
+        <div class="card-reg">
+        <div>
+            <input type="text" name="name" id="name" [(ngModel)]="name" placeholder="Enter name" required autofocus>
+        </div>
+       <hr>
+        <div>
+            <input type="text" name="username" id="username" [(ngModel)]="userName" placeholder="Enter username" required autofocus>
+        </div>
+        <hr>
+        <div>
+            <input type="tel" name="mobile" id="mobile" placeholder="Enter mobile" [(ngModel)]="userMobileNumber" required autofocus>
+        </div>
+        <hr>
+        <div>
+            <input type="text" name="age" id="age" placeholder="Enter age" [(ngModel)]="age" required autofocus>
+        </div>
+        <hr>
+        <div>
+            <input type="email" name="email" id="email" placeholder="Enter email" [(ngModel)]="userEmail" required autofocus>
+        </div>
+        <hr>
+        <div>
+            <input type="text" name="password" id="password" placeholder="Enter password" [(ngModel)]="userPassword" required autofocus>
+        </div>
+       
+        <div id="loading" >
+            <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:20%;">
+
+        </div>
+        
+        <span id="result-ver"></span>
+        <div id="submitButton">
+            <button  type="submit" name="submit" id="submit">Register</button>
+        </div>
+        </div>
+  </form>
+</section>
+<section id="hostelCheck" [style.display]="inserted">
+    <div class="card-h">
+      <form ngNativeValidation (submit)="hostelOrDayscholar()">
+            <div id="yearOfStudy">
+              <select class="form-select" aria-label="Default select example" name="yearOfStudy" id="year" [(ngModel)]="yearOfStudy">
+                  <option selected>Year</option>
+                  <option value="1">1st year</option>
+                  <option value="2">2nd year</option>
+                  <option value="3">3rd year </option>
+                  <option value="4">4th year</option>
+                 
+                  </select>
+              </div> 
+              <hr>
+              <div>
+              <select name="branch" [(ngModel)]="branch">
+                  
+                  <option value="CSE">Computer science engineering</option>
+                  <option value="EEE">Electrical and electronics engineering</option>
+                   <option value="ECE">Electrical and communication engineering</option>
+                   <option value="MECH">Mechanical engineering</option>
+                    <option value="CIVIL">Civil engineering</option>
+              </select>
+              </div>
+              <hr>
+              <div>
+             
+                <select class="form-select" aria-label="Default select example" name="hOrD"  id="hOrD" [(ngModel)]="hOrD">
+                      <option selected>Hostel or Dayscholar</option>
+                      <option value="H">Hosteller</option>
+                      <option value="D">DayScholar</option>
+                  </select>
+              </div>
+              <div id="buscheck" *ngIf="hOrD=='D'">
+                      <label for="bus">Need Bus</label>
+                       <select class="form-select" aria-label="Default select example"  name="bus" id="bus" [(ngModel)]="needBus">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+              </div>
+              <span id="result-reg"></span>
+              <div id="hostel-sub" style="display:block">
+                  <button type="submit" id="sub" name="sub">Finish</button>
+              </div>
+              <div id="hostel-loading" style="display:none;">
+                  <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:40%;">
+              </div>
+       </form>
+      </div>
+  
+  </section>
+  <section id="wallet" [style.display]="registered">
+    <div class=card-wal>
+       <h4><i>wallet created successfully!!</i></h4> 
+       <h5><i>please set transaction pin</i></h5>
+       <hr>
+       <form ngNativeValidation (submit)="setWallet()">
+                <div class="input-group mb-3">
+                   <input type="number" class="form-control" id="tpin" [(ngModel)]="tpin" name="tpin" placeholder="Enter transction pin" aria-label="Enter transction pin" aria-describedby="button-addon2" required>
+                </div>
+             <hr>
+         <div id="wal-submit" style="display:block">
+           <button type="submit" class="btn btn-primary" name="submit-wal" id="submit-wal">Set</button>
+        </div>
+        <div id="wal-loading" style="display:none;">
+           <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:15%;">
+       </div>
+       </form>
+    </div>
+   </section>

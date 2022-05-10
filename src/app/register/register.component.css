@@ -1,0 +1,103 @@
+.registration{
+    margin-left: 430px;
+    margin-top: 40px;
+}
+div{
+   
+    padding:5px;
+}
+input{
+
+    width:100%;
+    box-sizing: border-box;
+    padding:2px;
+    border:none;
+
+}
+.card-reg
+{
+    /* background-image:url("pexels-jeremy-bishop-2422915.jpg"); */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 50%;
+    height:80%;
+    margin-top: 1px;
+
+} 
+body{
+    /* background-image: url("pexels-jeremy-bishop-2422915.jpg"); */
+    background-size:cover;
+}
+.card-reg:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#submit{
+    margin-left: 160px;
+    width:30%;
+    max-height: max-content;
+}
+#hostelCheck{
+    margin-left: 525px;
+    margin-top: 150px;
+}
+.card-h{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    height:relative;
+    margin-top: 1px;
+
+}
+.card-wal{
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    height:relative;
+    margin-top:100px;
+    margin-left:400px;
+    
+}
+#loading{
+    margin-left:200px;
+}
+#result{
+    margin-left:195px;
+}
+ #sub{
+    margin-left: 175px;
+    width:40%;
+    max-height: max-content;
+}
+ #submit-wal{
+    margin-left: 390px;
+    width:20%;
+    max-height: max-content;
+    margin-top:10px;
+    margin-bottom:5px;
+    
+    
+}
+#wal-loading{
+    padding-top:15px;
+    margin-left:230px;
+    
+}
+#hostel-loading{
+  
+    margin-left:240px;
+    
+}
+#result-ver
+{
+    margin-left:250px;
+
+}
+#result-reg{
+    margin-left:230px;
+
+}
+#result-wal{
+     margin-left:230px;
+
+}
+
