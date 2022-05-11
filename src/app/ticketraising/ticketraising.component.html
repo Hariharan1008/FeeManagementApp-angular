@@ -1,0 +1,20 @@
+<section id="getTicket">
+  <div class="card" style="width:40%">
+    <div  class="shadow p-3 mb-0 bg-body rounded">
+        <form (submit)="insertTicket()">
+            <div id="title">
+                <h5 style="margin-top:10px;text-align: center;"><i>Enter your issue</i></h5>
+            </div>
+            <hr>
+            <div>
+                <input type="text" name="ticket" id="ticket" placeholder="enter your query" [(ngModel)]="query" required style="width:100%">
+            </div>
+            <hr>
+            <div style="margin-left:225px;padding-bottom: 10px;" >
+                <button type="submit" class="btn btn-secondary" name="submit" id="submit">send</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</section>
+

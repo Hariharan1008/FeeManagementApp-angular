@@ -13,6 +13,12 @@ import { LoginComponent } from './login/login.component';
 import { FeestatusComponent } from './feestatus/feestatus.component';
 import { FeestructureComponent } from './feestructure/feestructure.component';
 import { FeestransactionsComponent } from './feestransactions/feestransactions.component';
+import { MyticketsComponent } from './mytickets/mytickets.component';
+import { TicketraisingComponent } from './ticketraising/ticketraising.component';
+import { AddmoneytowalletComponent } from './addmoneytowallet/addmoneytowallet.component';
+import { PayfeesusingwalletComponent } from './payfeesusingwallet/payfeesusingwallet.component';
+import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
+import { AllproductsComponent } from './allproducts/allproducts.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,13 @@ import { FeestransactionsComponent } from './feestransactions/feestransactions.c
     LoginComponent,
     FeestatusComponent,
     FeestructureComponent,
-    FeestransactionsComponent
+    FeestransactionsComponent,
+    MyticketsComponent,
+    TicketraisingComponent,
+    AddmoneytowalletComponent,
+    PayfeesusingwalletComponent,
+    FundtransferComponent,
+    AllproductsComponent
   ],
   imports: [
     BrowserModule,

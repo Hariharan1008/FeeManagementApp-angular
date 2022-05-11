@@ -26,6 +26,10 @@ fee!:any;
     this.http.get(url).subscribe(res=>{
       this.fee=res;
       console.log(this.fee);
+      if(this.fee.feesPending=="0")
+      {
+        this.toastr.success("fee completed ");
+      }
     })
   }
   terminate()

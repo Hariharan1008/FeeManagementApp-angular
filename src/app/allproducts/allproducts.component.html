@@ -1,0 +1,15 @@
+<section id="allProducts" *ngIf="products">
+    <h5 style="text-align:center;"><i><b>All products</b></i></h5>
+       <div class="row" id="display" >
+        <div id="item" class="col-3" style="padding:30px;" *ngFor="let product of products">
+            <div class="card" style="width:18rem;">
+                <img class="card-img-top" src="assets/{{product.imageUrl}}" width="100px" height="150px" alt="Card image cap">
+               <div class="shadow p-3 mb-0 bg-body rounded">
+                     <h5 class="card-title" style="text-align:center">{{product.name}}</h5>
+                     <p class="card-text" style="text-align:center">{{product.walletPoints}} pts</p>
+                     <a class="btn btn-primary" style="margin-left:100px" (click)="buyProduct(product.id)">Buy</a>                                              
+               </div>
+            </div>
+         </div>           
+       </div>
+   </section>

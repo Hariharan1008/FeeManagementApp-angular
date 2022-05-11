@@ -1,0 +1,65 @@
+\<section id="getAmount" [style.display]="getFees">
+    <div class="card" id="anime" >
+        <div class="shadow p-3 mb-0 bg-body rounded">
+            <form (submit)="verifyAmount()">
+                  <div id="terminate" (click)="terminate()">
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div id="title">
+                     <h5><i>Enter amount</i></h5><br>
+                     <hr>
+                     <span style="margin-left:50px"><i><b> Your pending fee is</b></i></span> <span style="margin-left:50px">:</span><span id="pendingFee" style="margin-left:50px"><b>{{wallet.pendingFees}}</b></span><br>
+                    <span style="margin-left:50px"><i><b>Your wallet balance is</b> </i></span><span style="margin-left:30px">:</span><span id="walletBalance" style="margin-left:50px"><b>{{wallet.balance}}</b></span>
+                  </div>
+                   <hr>
+                   <div class="input-group mb-3">
+                        <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter amount" [(ngModel)]="amount" required aria-label="Enter amount" aria-describedby="button-addon2" required>
+                  </div>
+                  <div class="modal-footer" id="userButtons">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="pay-close" (click)="terminate()" style="display:block;">Close</button>
+                      <div id="amount-submit" style="display:block;">
+                           <button type="submit" class="btn btn-primary">add</button>
+                      </div>  
+                      <div id="amount-loading" style="display:none;">
+                        <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style="width:15%">
+                    </div> 
+                  </div>
+                  <div>
+                    <span id="validAmount"></span>
+                  </div>
+                  </form>
+             </div> 
+        </div>
+    </section>
+
+<section id="tpin-valid" [style.display]="getTpin">
+    <div class="card" id="anime" >
+        <div class="shadow p-3 mb-0 bg-body rounded">
+            <form (submit)="verifyTpin()">
+                  <div id="terminate" (click)="terminate()">
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div id="title">
+                     <h5><i>Enter Transaction pin</i></h5><br>
+                  </div>
+                   <hr>
+                   <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="tpin" id="tpin" [(ngModel)]="tpin" placeholder="enter transaction pin" required aria-label="Enter amount" aria-describedby="button-addon2" required>
+                  </div>
+                  <div class="modal-footer" id="userButtons">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="pay-close" (click)="terminate()" style="display:block;">Close</button>
+                      <div id="pin-submit" style="display:block;">
+                           <button type="submit" class="btn btn-primary">verify</button>
+                      </div>  
+                      <div id="pin-loading" style="display:none;">
+                        <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style="width:15%">
+                    </div> 
+                  </div>
+                  <div>
+                    <span id="paid-result"></span>
+                  </div>
+                  </form>
+             </div> 
+        </div>
+    </section>
+

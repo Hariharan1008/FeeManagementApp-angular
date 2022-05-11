@@ -1,0 +1,34 @@
+section{
+    margin-top:30px;
+}
+#bal-submit{
+    padding-top:5px;
+    margin-left:45px;
+}
+#bal-loading{
+    margin-top:275px;
+    margin-left:625px;
+}
+/* #pin-submit{
+    padding-top:5px;
+    margin-left:45px;
+} */
+#pin-loading{
+    padding-top:5px;
+    margin-left:210px;
+}
+.card{
+  margin-top:100px;
+  margin-left:430px;
+  border-right:500px; 
+  width:40%;
+}
+#terminate{
+    width:40px;
+    height:40px;
+    position:relative;
+    top:0px;
+    left:490px;
+    
+
+}
