@@ -5,6 +5,7 @@ import { AllproductsComponent } from './allproducts/allproducts.component';
 import { BuyproductComponent } from './buyproduct/buyproduct.component';
 import { FeestatusComponent } from './feestatus/feestatus.component';
 import { FeestransactionsComponent } from './feestransactions/feestransactions.component';
+import { FeestransactionsusingidComponent } from './feestransactionsusingid/feestransactionsusingid.component';
 import { FeestructureComponent } from './feestructure/feestructure.component';
 import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,7 +13,9 @@ import { LoginComponent } from './login/login.component';
 import { MyticketsComponent } from './mytickets/mytickets.component';
 import { PayfeesusingwalletComponent } from './payfeesusingwallet/payfeesusingwallet.component';
 import { RegisterComponent } from './register/register.component';
+import { TicketdetailsusingidComponent } from './ticketdetailsusingid/ticketdetailsusingid.component';
 import { TicketraisingComponent } from './ticketraising/ticketraising.component';
+import { WallettransactionsComponent } from './wallettransactions/wallettransactions.component';
 
 const routes: Routes = [
   {
@@ -53,6 +56,15 @@ const routes: Routes = [
   },
   {
     path:'buyproduct',component:BuyproductComponent
+  },
+  {
+    path:'feestransactionsusingid',component:FeestransactionsusingidComponent
+  },
+  {
+    path:'ticketdetailsusingid',component:TicketdetailsusingidComponent
+  },
+  {
+    path:'wallettransactions',component:WallettransactionsComponent
   }
 
 
