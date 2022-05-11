@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddmoneytowalletComponent } from './addmoneytowallet/addmoneytowallet.component';
 import { AllproductsComponent } from './allproducts/allproducts.component';
+import { BuyproductComponent } from './buyproduct/buyproduct.component';
 import { FeestatusComponent } from './feestatus/feestatus.component';
 import { FeestransactionsComponent } from './feestransactions/feestransactions.component';
 import { FeestructureComponent } from './feestructure/feestructure.component';
@@ -49,6 +50,9 @@ const routes: Routes = [
   },
   {
     path:'allproducts',component:AllproductsComponent
+  },
+  {
+    path:'buyproduct',component:BuyproductComponent
   }
 
 

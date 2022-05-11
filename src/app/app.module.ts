@@ -19,6 +19,8 @@ import { AddmoneytowalletComponent } from './addmoneytowallet/addmoneytowallet.c
 import { PayfeesusingwalletComponent } from './payfeesusingwallet/payfeesusingwallet.component';
 import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
 import { AllproductsComponent } from './allproducts/allproducts.component';
+import { BuyproductComponent } from './buyproduct/buyproduct.component';
+import { FeestransactionsusingidComponent } from './feestransactionsusingid/feestransactionsusingid.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { AllproductsComponent } from './allproducts/allproducts.component';
     AddmoneytowalletComponent,
     PayfeesusingwalletComponent,
     FundtransferComponent,
-    AllproductsComponent
+    AllproductsComponent,
+    BuyproductComponent,
+    FeestransactionsusingidComponent
   ],
   imports: [
     BrowserModule,

@@ -32,7 +32,7 @@ export class AllproductsComponent implements OnInit {
      this.http.get(url).subscribe(res=>{
       this.toastr.success("success");
       localStorage.setItem("productId",id);
-      this.router.navigate(["login"]);
+      this.router.navigate(["buyproduct"]);
      },err=>{
        this.toastr.error(err.error.message);
      })

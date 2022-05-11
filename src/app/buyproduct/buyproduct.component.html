@@ -1,0 +1,49 @@
+<section class="banner" id="display" *ngIf="product">
+    <div id="item" class="col-4" >
+        <div class="card" style="width:20rem">
+             <img class="card-img-top" src="assets/{{product.imageUrl}}" width="100px" height="100px"  alt="Card image cap">
+                  <div class="shadow p-3 mb-0 bg-body rounded">
+                      <h5 class="card-title" style="text-align:center">{{product.name}}</h5>
+                      <p class="card-text" style="text-align:center">{{product.walletPoints}} pts</p>
+                      <div id="pin-submit" style="display:block">
+                          <a class="btn btn-primary" style="margin-left:100px" (click)="buyProduct(product.id)">Confirm</a>
+                       </div>
+                      <div id="pin-loading" style="display:none;">
+                           <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:30%;">
+                      </div>
+
+                   </div>
+         </div>
+      </div> 
+</section>
+<section id="getTpin" [style.display]="verifyTpin">
+<div class="card" id="anime" >
+	<div class="shadow p-3 mb-0 bg-body rounded">
+	   <form (submit)="completeProcess()" id="tpinForm">
+	      <div id="terminate" (click)="terminate()">
+	         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+		  <div id="title">
+		     <h5><i>Enter transaction pin</i></h5><br>
+		  </div>
+		   <hr>
+		   <div class="input-group mb-3">
+		     				   
+                <input type="text" class="form-control" id="tpin" name="tpin" [(ngModel)]="tpin" placeholder="Enter transction pin" aria-label="Enter transction pin" aria-describedby="button-addon2" required>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-button" (click)="terminate()" style="display:block;">Close</button>
+              <div id="tpin-submit" style="display:block;">
+                   <button type="submit" class="btn btn-primary">Buy</button>
+              </div>
+            <div id="tpin-loading" style="display:none;">
+                 <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:20%;">
+            </div>
+          </div>
+          <div>
+              <span id="result"></span>
+          </div>
+          </form>
+	 </div> 
+</div>
+</section> 

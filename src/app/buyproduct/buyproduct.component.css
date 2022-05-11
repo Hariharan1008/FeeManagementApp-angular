@@ -1,0 +1,25 @@
+section{
+    margin-left:500px;
+}
+ #tpin-loading{
+  
+    margin-left:195px;
+
+   
+}
+#anime{
+    width:500px;
+    height:285px;
+    position:absolute;
+    top:100px;
+    left:450px;
+    }
+#terminate{
+    width:40px;
+    height:40px;
+    position:relative;
+    top:0px;
+    left:450px;
+    
+
+}
