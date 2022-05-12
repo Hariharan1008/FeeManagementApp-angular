@@ -1,0 +1,17 @@
+<section id="transactionDetails" *ngIf="transactions">
+    <div class="accordion accordion-flush" id="display" style="width:70%" *ngFor="let transaction of transactions;let i=index;">
+        <div class="accordion-item" >
+            <div class="shadow p-3 mb-0 bg-body rounded" >
+              <h5 class="accordion-header" [id]="'flush-heading'+i" style="text-align:center;">
+               
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse'+i" aria-expanded="false" [attr.aria-controls]="'flush-collapse'+i">
+                Transaction Id : {{transaction.transactionId}}    Amount: {{transaction.amount}}
+                </button>
+              </h5>
+              </div>
+              <div [id]="'flush-collapse'+i" class="accordion-collapse collapse" [attr.aria-labelledby]="'flush-heading'+i" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body" style="text-align:center;"> {{transaction.amount}} rs sent successfully to  {{transaction.receiver}} on {{transaction.transferedOn}}</div>
+              </div>
+          </div>
+    </div>
+  </section>

@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { MyticketsComponent } from './mytickets/mytickets.component';
 import { PayfeesusingwalletComponent } from './payfeesusingwallet/payfeesusingwallet.component';
 import { RegisterComponent } from './register/register.component';
+import { SendtransactionsComponent } from './sendtransactions/sendtransactions.component';
 import { TicketdetailsusingidComponent } from './ticketdetailsusingid/ticketdetailsusingid.component';
 import { TicketraisingComponent } from './ticketraising/ticketraising.component';
 import { WallettransactionsComponent } from './wallettransactions/wallettransactions.component';
@@ -65,6 +66,9 @@ const routes: Routes = [
   },
   {
     path:'wallettransactions',component:WallettransactionsComponent
+  },
+  {
+    path:'sendtransactions',component:SendtransactionsComponent
   }
 
 
