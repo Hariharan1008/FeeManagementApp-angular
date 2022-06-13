@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TicketraisingComponent implements OnInit {
   query!:any;
+  loading="none";
 
   constructor(private http:HttpClient,private toastr:ToastrService) { }
 
@@ -19,12 +20,15 @@ export class TicketraisingComponent implements OnInit {
   {
     if(this.query!=null && this.query!="" && this.query!=" ")
     {
+      this.loading="block";
       let email=localStorage.getItem("sessionEmail");
       const url="http://localhost:9000/ticket/insert?query="+this.query+"&email="+email;
       this.http.get(url).subscribe(res=>{
+        this.loading="none";
         this.toastr.success("successfully sent");
         
       },err=>{
+        this.loading="none";
         this.toastr.error(err.error.message);
         
       });

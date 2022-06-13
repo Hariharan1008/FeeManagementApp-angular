@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class TicketdetailsusingidComponent implements OnInit {
  ticket!:any;
  ticketId!:any;
+ loading="none";
   constructor(private http:HttpClient,private toastr:ToastrService) { }
 
   ngOnInit(): void {
@@ -18,11 +19,14 @@ export class TicketdetailsusingidComponent implements OnInit {
   {
     if(this.ticketId>0)
     {
+      this.loading="block";
      let email=localStorage.getItem("sessionEmail");
      const url="http://localhost:9000/transaction/ticket/usingid?ticketId="+this.ticketId+"&email="+email;
      this.http.get(url).subscribe(res=>{
+      this.loading="none";
        this.ticket=res;
      },err=>{
+      this.loading="none";
        this.toastr.error(err.error.message);
      });
     }

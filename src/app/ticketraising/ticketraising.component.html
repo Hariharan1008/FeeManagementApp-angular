@@ -11,9 +11,19 @@
                 <input type="text" name="ticket" id="ticket" placeholder="enter your query" [(ngModel)]="query" required style="width:100%">
             </div>
             <hr>
-            <div style="margin-left:225px;padding-bottom: 10px;" >
-                <button type="submit" class="btn btn-secondary" name="submit" id="submit">send</button>
-            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div [style.display]="loading"> 
+                      <img src="assets/tenor_1.gif" style="width:15%;margin-left:190px;margin-top: 8px;">
+                    </div>
+               </div>
+               <div class="col-8" id="submitButton">
+                   <button type="submit" class="btn btn-secondary" style="margin-left:40px;"name="submit" id="submit">send</button>
+               </div>
+            </div>  
+            <!-- <div style="margin-left:225px;padding-bottom: 10px;" >
+               
+            </div> -->
         </form>
     </div>
   </div>
