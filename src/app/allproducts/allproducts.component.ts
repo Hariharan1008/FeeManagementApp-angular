@@ -22,7 +22,7 @@ export class AllproductsComponent implements OnInit {
     this.http.get(url).subscribe(res=>{
      this.products=res;
     },err=>{
-     this.toastr.error(err.erroe.message);
+     this.toastr.error(err.error.message);
     })
   }
   buyProduct(id:any)

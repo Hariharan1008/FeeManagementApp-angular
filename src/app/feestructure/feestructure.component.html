@@ -1,3 +1,4 @@
+<app-header></app-header>
 <section id="yearAndBranch" *ngIf="!fee">
         
     <div class="card-h">
@@ -27,14 +28,22 @@
               <option value="CIVIL">Civil engineering</option>
             </select>
           </div>
-          <div class="modal-footer" id="userButtons">
-            <div id="loading" style="display:none;">
-              <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:25%;">
+          <!-- <div class="modal-footer" id="userButtons"> -->
+            <div id="submitButton">
+              
             </div>
-            <div id="submitButton" style="display:block">
-              <button  type="submit" name="submit" id="submit" class="btn btn-secondary">Check status</button>
-            </div>
+            <div class="row">
+              <div class="col-4">
+                  <div [style.display]="loading"> 
+                    <img src="assets/tenor_1.gif" style="width:25%;margin-left:105px;margin-top: 25px;">
+                  </div>
+             </div>
+             <div class="col-8" id="wal-submit" style="padding-top: 20px">
+                <button  type="submit" name="submit" style="margin-left:5px;" id="submit" class="btn btn-secondary">Check status</button>
+             </div>
           </div>
+
+          <!-- </div> -->
           <div>
             <span id="result"></span>
           </div>

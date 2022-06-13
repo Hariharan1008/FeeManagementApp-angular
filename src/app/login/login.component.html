@@ -1,7 +1,7 @@
 <app-header></app-header>
 <section class="login" >
     <div class="card">        
-        <img src="" width="100%" length="5%">
+        <img src="assets/man-key-near-computer-account-260nw-1499141258.webp" width="100%" length="5%">
         <form (submit)="validation()" method="post">
             <div id="emailInput">
                 <input type="email" name="email" id="email" [(ngModel)]="email"
@@ -11,16 +11,20 @@
                 <input type="password" name="password" id="password" [(ngModel)]="password"
                 placeholder="Enter password" required><span id="passwordError"></span>
             </div>
-            <div id="loading" style="display:none;">
-                <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:15%;">
+            <div class="row">
+                <div class="col-4">
+                    <div [style.display]="loading"> 
+                      <img src="assets/tenor_1.gif"  style="width:10%;margin-left:105px;margin-top: px;">
+                    </div>
+                </div>
+                <div class="col-8" id="formsubmit">
+                    <span id="msg"></span> 
+                    <button type="submit" class="btn btn-secondary" style="margin-top: px;" name="submit" id="submit">Login</button>
+                </div>
             </div>
-            <div id="formsubmit" style="display:block;">
-                <span id="msg"></span> 
-                <button type="submit" name="submit" id="submit">LOGIN</button>
-            </div>
-            <div>
+            <!-- <div>
                 <a href="forgotPassword.html" style="margin-left:130px;">forgot password</a>
-            </div>
+            </div> -->
             <span id="result"></span>                                    
         </form>
     </div>

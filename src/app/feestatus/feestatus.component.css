@@ -3,27 +3,18 @@
     color: white;
 }
 #feesStatusTable{
-     margin-top: 60px;
+     margin-top: 80px;
     margin-left: 40px; 
 }
-#loading{
-    margin-top:250px;
-    margin-left: 600px;
-}
+/*  */
 #submitButton{
     margin-top:30px;
-}
-th{
-padding:20px;
-}
-td{
-    padding:20px;
 }
 #paidFees{
 margin-left:80px;
 }
 #pendingFees{
-margin-left:80px;
+margin-left:50px;
 }
 #totalFees{
 margin-left:80px;
@@ -47,7 +38,7 @@ margin-left:70px;
 		}
 
 .card{
-   margin-top:80px;
+   margin-top:100px;
    margin-left:450px;
    border-right:500px; 
    width:30%;

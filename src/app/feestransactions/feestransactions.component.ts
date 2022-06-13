@@ -10,6 +10,8 @@ import { HttpClient } from '@angular/common/http';
 export class FeestransactionsComponent implements OnInit {
 transactions!:any;
 transaction:any;
+
+loading="none";
   constructor(private http:HttpClient,private toastr:ToastrService) { }
   
   ngOnInit(): void {
@@ -17,11 +19,15 @@ transaction:any;
   }
   findTransactionDetails()
   {
+    this.loading="block";
     let email=localStorage.getItem("sessionEmail");
-    const url="http://localhost:9000/transaction/FeesTransactions?sessionEmail="+email;
+    const url="http://localhost:9000/transaction/feestransactions?sessionEmail="+email;
     this.http.get(url).subscribe(res=>{
+      this.loading="none";
       this.transactions=res;
+      console.log(res);
     },err=>{
+      this.loading="none";
       this.toastr.error(err.error.message);
     });
 

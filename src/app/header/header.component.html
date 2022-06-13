@@ -1,31 +1,77 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+  <a class="navbar-brand" routerLink="feestatus">FeeManagement</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               Fees
+           </a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+             <li><a class="dropdown-item" routerLink="/feestructure">Fees Structure</a></li>
+             <li><a class="dropdown-item" routerLink="/feestatus">Fees Status</a></li>                      
+           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Fees Transactions
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="/feestransactions">All Transactions</a></li>
+            <li><a class="dropdown-item" routerLink="/feestransactionsusingid">Find Transaction</a></li>
+            
+          </ul>
+       </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tickets
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" routerLink="/ticketraising">Raise a Ticket</a></li>
+          <li><a class="dropdown-item" routerLink="/mytickets">All Tickets</a></li>
+          <li><a class="dropdown-item" routerLink="/ticketdetailsusingid">Find Ticket</a></li> 
+        </ul>
+     </li>                
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="addMoneyToWallet.html">addMoneyToWallet<span class="sr-only"></span></a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Wallet
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="/addmoneytowallet">Add Money</a></li>
+            <li><a class="dropdown-item" routerLink="/payfeesusingwallet">Pay Fees</a></li>
+            <li><a class="dropdown-item" routerLink="/wallettransactions">Wallet Transactions</a></li> 
+          </ul>
+       </li>   
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Fund Transfer
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" routerLink="/fundtransfer">Send Money</a></li>
+          <li><a class="dropdown-item" routerLink="/sendtransactions">Send Transactions</a></li>
+        </ul>
+     </li>   
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Shop
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <li><a class="dropdown-item" routerLink="/allproducts">Shop and buy</a></li>
+        <li><a class="dropdown-item" routerLink="#">My Products</a></li>
       </ul>
-    </div>
-  </nav>
+    </li>   
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="#">Notifications<span id="notification"></span><span class="sr-only"></span></a>
+    </li>
+     <li class="nav-item active">
+      <a class="nav-link" routerLink="#">Logout<span id="notification"></span><span class="sr-only"></span></a>
+    </li>
+    </ul>
+  </div>
+</nav>

@@ -1,5 +1,5 @@
 .login {
-    margin-top:200px;
+    margin-top:110px;
     margin-left:550px;
     margin-bottom:100px;
     margin-right:500px;
@@ -10,14 +10,16 @@
 #email
 {
    
-    margin-left :40px;
+    margin-left :30px;
+    padding: 10px;
 }
 #password
 {
-    margin-left :40px;
+    margin-left :30px;
+    padding: 10px;
 }
  div {
-   width: 250px;
+   width: 270px;
    padding: 2px;
    margin: 2px;
     }
@@ -26,6 +28,7 @@
         text-align:center ;
         margin-left :90px;
         background-color:rosybrown;
+        
     }
     body{
         /* nbackground-image: url("pexels-todd-trapani-1420440.jpg"); */
@@ -35,7 +38,7 @@
         background-size:cover; 
         background-repeat: no-repeat;
         background-position: right top;
-        margin-right: 200px;
+        /* margin-right: 200px; */
         background-attachment: scroll;
     }
     .card{
@@ -54,12 +57,6 @@
       width:relative;
      box-sizing: border-box;
     
-    }
-     #loading{
-       
-        margin-left: 102px;
-        backface-visibility: hidden;
-
     }
     #result
     {

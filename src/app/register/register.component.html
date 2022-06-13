@@ -1,40 +1,32 @@
-<app-header></app-header>
+
 <section class="registration" id="registrationDetails" [style.display]="verified">
   <form ngNativeValidation (submit)="registerValidation()" id="regForm" >
-        <div class="card-reg">
+        <div class="card-reg" style="background-color:black;">
         <div>
-            <input type="text" name="name" id="name" [(ngModel)]="name" placeholder="Enter name" required autofocus>
+            <input type="text" name="name" id="name" [(ngModel)]="name" style="background-color:;" placeholder="Enter name" required autofocus>
         </div>
        <hr>
         <div>
-            <input type="text" name="username" id="username" [(ngModel)]="userName" placeholder="Enter username" required autofocus>
+            <input type="text" name="username" id="username" [(ngModel)]="userName" style="background-color:;" placeholder="Enter username" required autofocus>
         </div>
         <hr>
         <div>
-            <input type="tel" name="mobile" id="mobile" placeholder="Enter mobile" [(ngModel)]="userMobileNumber" required autofocus>
+            <input type="tel" name="mobile" id="mobile" placeholder="Enter mobile" style="background-color: ;" [(ngModel)]="userMobileNumber" required autofocus>
         </div>
         <hr>
         <div>
-            <input type="text" name="age" id="age" placeholder="Enter age" [(ngModel)]="age" required autofocus>
+            <input type="text" name="age" id="age" placeholder="Enter age" style="background-color:;" [(ngModel)]="age" required autofocus>
         </div>
         <hr>
         <div>
-            <input type="email" name="email" id="email" placeholder="Enter email" [(ngModel)]="userEmail" required autofocus>
+            <input type="email" name="email" id="email" placeholder="Enter email" style="background-color:;" [(ngModel)]="userEmail" required autofocus>
         </div>
         <hr>
         <div>
-            <input type="text" name="password" id="password" placeholder="Enter password" [(ngModel)]="userPassword" required autofocus>
+            <input type="text" name="password" id="password" placeholder="Enter password" style="background-color: ;" [(ngModel)]="userPassword" required autofocus>
         </div>
-       
-        <div id="loading" >
-            <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:20%;">
-
-        </div>
-        
         <span id="result-ver"></span>
-        <div id="submitButton">
-            <button  type="submit" name="submit" id="submit">Register</button>
-        </div>
+       
         </div>
   </form>
 </section>
@@ -53,7 +45,7 @@
               </div> 
               <hr>
               <div>
-              <select name="branch" [(ngModel)]="branch">
+              <select class="form-select" name="branch" [(ngModel)]="branch">
                   
                   <option value="CSE">Computer science engineering</option>
                   <option value="EEE">Electrical and electronics engineering</option>
@@ -79,13 +71,17 @@
                         </select>
               </div>
               <span id="result-reg"></span>
-              <div id="hostel-sub" style="display:block">
-                  <button type="submit" id="sub" name="sub">Finish</button>
-              </div>
-              <div id="hostel-loading" style="display:none;">
-                  <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:40%;">
-              </div>
-       </form>
+              <div class="row">
+                <div class="col-4">
+                    <div [style.display]="loading2"> 
+                      <img src="assets/tenor_1.gif" style="width:30%;margin-left:80px;margin-top: px;">
+                    </div>
+               </div>
+               <div class="col-8" id="hostel-sub">
+                <button type="submit" id="sub" style="margin-left:10px;margin-top:5px;" name="sub">Finish</button>
+               </div>
+            </div>
+            </form>
       </div>
   
   </section>
@@ -99,12 +95,16 @@
                    <input type="number" class="form-control" id="tpin" [(ngModel)]="tpin" name="tpin" placeholder="Enter transction pin" aria-label="Enter transction pin" aria-describedby="button-addon2" required>
                 </div>
              <hr>
-         <div id="wal-submit" style="display:block">
-           <button type="submit" class="btn btn-primary" name="submit-wal" id="submit-wal">Set</button>
-        </div>
-        <div id="wal-loading" style="display:none;">
-           <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:15%;">
-       </div>
+             <div class="row">
+                <div class="col-4">
+                    <div [style.display]="loading3"> 
+                      <img src="assets/tenor_1.gif" style="width:20%;margin-left:400px;margin-top: 10px;">
+                    </div>
+               </div>
+               <div class="col-8" id="wal-submit">
+                <button type="submit" style="margin-left:270px" class="btn btn-primary" name="submit-wal" id="submit-wal">Set</button>
+               </div>
+            </div>
        </form>
     </div>
    </section>

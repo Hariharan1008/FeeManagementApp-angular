@@ -12,6 +12,7 @@ export class FeestructureComponent implements OnInit {
 year!:any;
 branch!:any;
 fee!:any;
+loading="none";
 
   constructor(private http:HttpClient,private toastr:ToastrService) { }
 
@@ -19,11 +20,14 @@ fee!:any;
   }
   findFeesStructure()
   {
+    this.loading="block";
     const url="http://localhost:9000/fees/feesStructure?year="+this.year+"&branch="+this.branch;
     this.http.get(url).subscribe(res=>{
+      this.loading="none";
       this.fee=res;
     },err=>{
       this.toastr.error(err.error.message);
+      this.loading="none";
     })
 
   }
