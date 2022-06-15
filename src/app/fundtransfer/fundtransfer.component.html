@@ -7,20 +7,22 @@
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div id="title">
-                     <h5><i>Enter mobile number</i></h5><br>
+                     <h5><i>Enter Mobile Number</i></h5><br>
                   </div>
                    <hr>
                    <div class="input-group mb-3">
-                        <input type="number" class="form-control" name="mobile" id="mobile" [(ngModel)]="mobile" placeholder="enter mobile number" aria-label="enter mobile number" aria-describedby="button-addon2" required>
+                        <input type="number" class="form-control" name="mobile" id="mobile" [(ngModel)]="mobile" placeholder="Enter Mobile Number" aria-label="enter mobile number" aria-describedby="button-addon2" required>
                   </div>
-                  <div class="modal-footer" id="userButtons">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-button" (click)="terminate()" style="display:block;">Close</button>
-                      <div id="user-submit" style="display:block;">
-                           <button type="submit" class="btn btn-primary">find</button>
-                      </div>
-                      <div id="user-loading" style="display:none;">
-                        <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:20%;">
-                      </div>    
+                  <hr>
+                  <div class="row">
+                    <div class="col-4">
+                        <div [style.display]="loading1"> 
+                          <img src="assets/tenor_1.gif" style="width:15%;margin-left:425px;margin-top: 8px;">
+                        </div>
+                    </div>
+                    <div class="col-8" id="submitButton">
+                        <button type="submit" style="margin-left: 280px;" class="btn btn-primary">find</button>
+                    </div> 
                   </div>
                   <div>
                     <span id="nouser"></span>
@@ -44,6 +46,7 @@
                 <div>
                     <h5 id="username"><i><b>{{name}}</b></i></h5>
                 </div>
+                <hr>
                 <div class="modal-footer" id="userButtons">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-button" (click)="proceed()" style="display:block;">Proceed</button>
                     <button type="button" class="btn btn-primary" (click)="terminate()">change Number</button> 
@@ -98,15 +101,17 @@
                            <div class="input-group mb-3">
                                 <input type="number" class="form-control" id="tpin" name="tpin" [(ngModel)]="tpin" required placeholder="Enter transaction pin" aria-label="enter mobile number" aria-describedby="button-addon2" required>
                           </div>
-                          <div class="modal-footer" id="userButtons">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-button" (click)="terminate()" style="display:block;">Close</button>
-                              <div id="pin-submit" style="display:block;">
-                                   <button type="submit" class="btn btn-primary">pay</button>
-                              </div>
-                              <div id="pin-loading" style="display:none;">
-                                <img src="a2dc9668f2cf170fe3efeb263128b0e7.gif" style=" width:20%;">
-                              </div>    
-                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-4">
+                                <div [style.display]="loading2"> 
+                                  <img src="assets/tenor_1.gif" style="width:15%;margin-left:425px;margin-top: 8px;">
+                                </div>
+                            </div>
+                            <div class="col-8" id="submitButton">
+                                <button type="submit" style="margin-left: 280px;" class="btn btn-primary">pay</button>
+                            </div> 
+                        </div>
                           <div>
                             <span id="pinValid"></span>
                           </div>

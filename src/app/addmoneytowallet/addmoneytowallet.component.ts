@@ -12,6 +12,7 @@ validAmount="block";
 validTpin="none";
 amount!:any;
 tpin!:any;
+loading="none";
 
   constructor(private http:HttpClient,private toastr:ToastrService) { }
 
@@ -30,26 +31,31 @@ tpin!:any;
   }
   updateWallet()
   {
-    // if(this.tpin!="" && this.tpin.length<4 && this.tpin!=" ")
-    // {
+    let pin=""+this.tpin;
+     if(pin!="" && pin.length>=4 && this.tpin!=" ")
+     {
+      this.loading="block";
      let mobile=localStorage.getItem("sessionMobile");
      let walletCredentials={"mobile":mobile,"tpin":this.tpin};
      const url="http://localhost:9000/wallet/verification";
      this.http.post(url,walletCredentials).subscribe(res=>{
          const url1="http://localhost:9000/wallet/addMoney?amount="+this.amount+"&sessionMobile="+mobile;
          this.http.get(url1).subscribe(res1=>{
+          this.loading="none";
             this.toastr.success("successfully added");
           },err=>{
+            this.loading="none";
            this.toastr.error(err.error.message);
           });
 
      },err=>{
+      this.loading="none";
         this.toastr.error(err.error.message);
      });
-    // }
-    // else{
-    //   this.toastr.error("enter a valid pin");
-    // }
+     }
+    else{
+       this.toastr.error("enter a valid pin");
+    }
   }
   terminate()
    {

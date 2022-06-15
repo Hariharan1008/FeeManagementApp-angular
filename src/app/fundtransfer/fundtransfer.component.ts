@@ -17,6 +17,8 @@ export class FundtransferComponent implements OnInit {
    tpin!:number;
    userName!:any;
    name!:any;
+   loading1="none";
+   loading2="none";
   constructor(private http:HttpClient,private toastr:ToastrService) { }
 
   ngOnInit(): void {
@@ -25,10 +27,13 @@ export class FundtransferComponent implements OnInit {
   findUser()
   {
     let mobileNumber= ""+this.mobile;
-    if(mobileNumber.length==10)
+    let mobile=localStorage.getItem("sessionMobile");
+     if(mobileNumber.length==10 && mobile!=mobileNumber)
     {
+      this.loading1="block";
         const url="http://localhost:9000/fundTransfer/findUser?receiverMobile="+this.mobile;
         this.http.get(url).subscribe(res=>{
+          this.loading1="none";
         this.userName=res;
         this.name=this.userName.message;
         this.getUser="none";
@@ -36,6 +41,7 @@ export class FundtransferComponent implements OnInit {
         // this.getAmount="none";
         // this.getTpin="none";
          },err=>{
+          this.loading1="none";
         this.toastr.error(err.error.message);
         })
     }
@@ -65,12 +71,14 @@ export class FundtransferComponent implements OnInit {
        let pin=""+this.tpin;
       if(pin.length>3)
       {
+        this.loading2="block";
         let mobile=localStorage.getItem("sessionMobile");
         let walletCredentials={"mobile":mobile,"tpin":this.tpin};
         const url="http://localhost:9000/wallet/verification";
         this.http.post(url,walletCredentials).subscribe(res=>{
            this.verifyAndProcess();
         },err=>{
+          this.loading2="none";
           this.toastr.error(err.error.message);
         });
       }
@@ -96,8 +104,10 @@ export class FundtransferComponent implements OnInit {
        let receiverMobile=this.mobile;
        const url="http://localhost:9000/fundTransfer/updateAllTransactions?receiverMobile="+receiverMobile+"&senderMobile="+senderMobile+"&amount="+this.amount;
        this.http.get(url).subscribe(res=>{
+        this.loading2="none";
         this.toastr.success("successfully transfered");
        },err=>{
+        this.loading2="none";
         this.toastr.error(err.error.message);
        });
   }
